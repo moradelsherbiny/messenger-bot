@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.json());
 
-const PAGE_ACCESS_TOKEN = "PASTE_YOUR_PAGE_ACCESS_TOKEN_HERE";
+const PAGE_ACCESS_TOKEN = "EAAMGscNpjaYBRimKcGnLyjwf637ksnWIafM6OXZBR8MXqpMnwnRiqnnF3FF599ZBVR2ZCYCHCDIQvK3Q7JMpFMFWcGVE1P173wCLZCBAZBt39yvff8Rw42BMPeQPrJD2otXMlGzYmPGE9SNqPMqWuYKGdMTinh3FSLuZBI0iXqwtCiJtn9DhiDlRyZAx861xgE4p8B1PQZDZD";
 const VERIFY_TOKEN = "MY_VERIFY_TOKEN_123";
 
 // ✅ رسايل كل بوست
