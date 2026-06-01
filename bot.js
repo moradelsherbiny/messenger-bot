@@ -46,9 +46,12 @@ app.post("/webhook", async (req, res) => {
       const senderId = event.sender.id;
       const refPostId = event.postback?.referral?.ref || event.referral?.ref || "";
 
+      // 🔍 طباعة كل البيانات الواصلة للـ debug
+      console.log(`📩 رسالة واصلة | sender: ${senderId} | refPostId: [${refPostId}] | referral: ${JSON.stringify(event.referral)} | postback: ${JSON.stringify(event.postback)}`);
+
       // ✅ بس لو البوست موجود في الكونفيج
       if (!POST_MESSAGES[refPostId]) {
-        console.log(`⛔ بوست مش موجود: ${refPostId}`);
+        console.log(`⛔ بوست مش موجود: [${refPostId}] — المتاح: ${Object.keys(POST_MESSAGES).join(", ")}`);
         continue;
       }
 
